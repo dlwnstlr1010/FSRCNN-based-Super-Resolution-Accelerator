@@ -1,5 +1,9 @@
 # FSRCNN-based Super-Resolution Accelerator on FPGA (ZCU102)
 
+## Live Demo
+
+https://github.com/user-attachments/assets/542feb19-7408-401b-a447-4f86ecf2f2b4
+
 ## Contributors
 **이준식 (Junsik Lee)** — this repository
 - Role: **Feature Extraction Layer RTL Design & Model Compression**
@@ -207,12 +211,6 @@ GOPS/W    = 907.8 GOPS ÷ 5.625 W (total on-chip power) ≈ 161.4 GOPS/W
 ```
 
 (Vivado `report_power` here uses its default vectorless estimation — no simulation switching-activity file was supplied — so Confidence Level is reported as "Low"; this is standard practice for capstone-level FPGA power reporting. GOPS is computed with the common accelerator-literature convention of installed-compute-units × clock, counting one multiply + one add per MAC.)
-
-## Live Demo System
-
-- **Zynq firmware** ([`firmware/vitis_final/`](firmware/vitis_final/)): Vitis (C, bare-metal), lwIP UDP stack for host communication, AXI DMA for PL↔DDR frame transfer (`main.c`: 320×180×4B input → PL → 1280×720×1B output, double-buffered).
-- **Host client** ([`firmware/prototype_UDP/ethernet_udp.py`](firmware/prototype_UDP/ethernet_udp.py)): Python + OpenCV — webcam capture, YCrCb conversion/downscale, UDP send/receive, side-by-side comparison display.
-- **Demo methodology**: there is no native low-resolution camera — a live 1280×720 webcam feed is deliberately downscaled to 320×180 to synthesize a low-resolution input (the standard super-resolution evaluation technique: downsample a real HR source to get an LR/HR pair to compare against). Only the Y channel is sent through the FPGA's FSRCNN pipeline; Cr/Cb for the final display are reused directly from the original 720p frame. The display shows a side-by-side comparison: naive nearest-neighbor upscale vs. the FSRCNN accelerator output.
 
 ## Repository Structure
 
