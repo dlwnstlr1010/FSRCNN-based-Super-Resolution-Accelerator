@@ -1,0 +1,347 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x353E0009287FA317",
+      "device": "xczu9eg-ffvb1156-2-e",
+      "gen_directory": "../../../../ip_merging.gen/sources_1/bd/FSRCNN_CORE",
+      "name": "FSRCNN_CORE",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "FSRCNN_CORE": {
+        "F_Layer_0": "",
+        "S_Layer_0": "",
+        "E_Layer_0": "",
+        "Y_Converter_0": "",
+        "M_Layer_0": "",
+        "D_top_0": ""
+      }
+    },
+    "interface_ports": {
+      "s_axis_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "FSRCNN_CORE_axi_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      },
+      "m_axis_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "FSRCNN_CORE_axi_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          }
+        }
+      }
+    },
+    "ports": {
+      "axi_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "s_axis_0:m_axis_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "FSRCNN_CORE_axi_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "axi_reset_n_0": {
+        "direction": "I"
+      },
+      "EOF_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "FSRCNN_CORE": {
+        "interface_ports": {
+          "s_axis_0": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "m_axis_0": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "ports": {
+          "axi_clk_0": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "axi_reset_n_0": {
+            "direction": "I"
+          },
+          "EOF_0": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "F_Layer_0": {
+            "vlnv": "xilinx.com:user:F_Layer:1.0",
+            "xci_name": "FSRCNN_CORE_F_Layer_0_0",
+            "xci_path": "ip\\FSRCNN_CORE_F_Layer_0_0\\FSRCNN_CORE_F_Layer_0_0.xci",
+            "inst_hier_path": "FSRCNN_CORE/F_Layer_0"
+          },
+          "S_Layer_0": {
+            "vlnv": "xilinx.com:user:S_Layer:1.0",
+            "xci_name": "FSRCNN_CORE_S_Layer_0_0",
+            "xci_path": "ip\\FSRCNN_CORE_S_Layer_0_0\\FSRCNN_CORE_S_Layer_0_0.xci",
+            "inst_hier_path": "FSRCNN_CORE/S_Layer_0"
+          },
+          "E_Layer_0": {
+            "vlnv": "xilinx.com:user:E_Layer:1.0",
+            "xci_name": "FSRCNN_CORE_E_Layer_0_0",
+            "xci_path": "ip\\FSRCNN_CORE_E_Layer_0_0\\FSRCNN_CORE_E_Layer_0_0.xci",
+            "inst_hier_path": "FSRCNN_CORE/E_Layer_0"
+          },
+          "Y_Converter_0": {
+            "vlnv": "xilinx.com:user:Y_Converter:1.0",
+            "xci_name": "FSRCNN_CORE_Y_Converter_0_0",
+            "xci_path": "ip\\FSRCNN_CORE_Y_Converter_0_0\\FSRCNN_CORE_Y_Converter_0_0.xci",
+            "inst_hier_path": "FSRCNN_CORE/Y_Converter_0"
+          },
+          "M_Layer_0": {
+            "vlnv": "xilinx.com:user:M_Layer:1.0",
+            "xci_name": "FSRCNN_CORE_M_Layer_0_0",
+            "xci_path": "ip\\FSRCNN_CORE_M_Layer_0_0\\FSRCNN_CORE_M_Layer_0_0.xci",
+            "inst_hier_path": "FSRCNN_CORE/M_Layer_0"
+          },
+          "D_top_0": {
+            "vlnv": "xilinx.com:user:D_top:1.0",
+            "xci_name": "FSRCNN_CORE_D_top_0_0",
+            "xci_path": "ip\\FSRCNN_CORE_D_top_0_0\\FSRCNN_CORE_D_top_0_0.xci",
+            "inst_hier_path": "FSRCNN_CORE/D_top_0"
+          }
+        },
+        "interface_nets": {
+          "D_top_0_m_axis": {
+            "interface_ports": [
+              "m_axis_0",
+              "D_top_0/m_axis"
+            ]
+          },
+          "E_Layer_0_m_axis": {
+            "interface_ports": [
+              "E_Layer_0/m_axis",
+              "D_top_0/s_axis"
+            ]
+          },
+          "F_Layer_0_m_axis": {
+            "interface_ports": [
+              "F_Layer_0/m_axis",
+              "S_Layer_0/s_axis"
+            ]
+          },
+          "M_Layer_0_m_axis": {
+            "interface_ports": [
+              "M_Layer_0/m_axis",
+              "E_Layer_0/s_axis"
+            ]
+          },
+          "S_Layer_0_m_axis": {
+            "interface_ports": [
+              "S_Layer_0/m_axis",
+              "M_Layer_0/s_axis"
+            ]
+          },
+          "Y_Converter_0_m_axis": {
+            "interface_ports": [
+              "Y_Converter_0/m_axis",
+              "F_Layer_0/s_axis"
+            ]
+          },
+          "s_axis_0_1": {
+            "interface_ports": [
+              "s_axis_0",
+              "Y_Converter_0/s_axis"
+            ]
+          }
+        },
+        "nets": {
+          "D_top_0_EOF": {
+            "ports": [
+              "D_top_0/EOF",
+              "EOF_0"
+            ]
+          },
+          "axi_clk_0_1": {
+            "ports": [
+              "axi_clk_0",
+              "Y_Converter_0/axi_clk",
+              "S_Layer_0/axi_clk",
+              "M_Layer_0/axi_clk",
+              "E_Layer_0/axi_clk",
+              "D_top_0/axi_clk",
+              "F_Layer_0/axi_clk"
+            ]
+          },
+          "axi_reset_n_0_1": {
+            "ports": [
+              "axi_reset_n_0",
+              "Y_Converter_0/axi_reset_n",
+              "S_Layer_0/axi_reset_n",
+              "M_Layer_0/axi_reset_n",
+              "E_Layer_0/axi_reset_n",
+              "D_top_0/axi_reset_n",
+              "F_Layer_0/axi_reset_n"
+            ]
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "D_top_0_m_axis": {
+        "interface_ports": [
+          "m_axis_0",
+          "FSRCNN_CORE/m_axis_0"
+        ]
+      },
+      "s_axis_0_1": {
+        "interface_ports": [
+          "s_axis_0",
+          "FSRCNN_CORE/s_axis_0"
+        ]
+      }
+    },
+    "nets": {
+      "D_top_0_EOF": {
+        "ports": [
+          "FSRCNN_CORE/EOF_0",
+          "EOF_0"
+        ]
+      },
+      "axi_clk_0_1": {
+        "ports": [
+          "axi_clk_0",
+          "FSRCNN_CORE/axi_clk_0"
+        ]
+      },
+      "axi_reset_n_0_1": {
+        "ports": [
+          "axi_reset_n_0",
+          "FSRCNN_CORE/axi_reset_n_0"
+        ]
+      }
+    }
+  }
+}

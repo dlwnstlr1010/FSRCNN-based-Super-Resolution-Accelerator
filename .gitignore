@@ -1,0 +1,5 @@
+# OS / 에디터 잡파일
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
