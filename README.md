@@ -1,17 +1,17 @@
 # FSRCNN-based Super-Resolution Accelerator on FPGA (ZCU102)
 
 ## Contributors
+**이준식 (Junsik Lee)** — this repository
+- Role: **Feature Extraction Layer RTL Design & Model Compression**
+- Repo in Detail: [`hdl/individual_layers/feature_extraction/`](hdl/individual_layers/feature_extraction/)
+
 **신광선 (Gwangsun Shin)**
-- Role: **Project Leader & Mapping Layer RTL Design & Design Verification based on SystemVerilog**
+- Role: **Mapping Layer RTL Design & Design Verification**
 - Repo in Detail: https://github.com/youngyang00/FSRCNN-accelerator-mappingLayer
 
 **조수환 (Suhwan Jo)**
 - Role: **Shrinking, Expanding Layer RTL Design & TCP transport FW design**
-- Repo in Detail: [FSRCNN_Layers_CustomIPs](https://github.com/suhwanJo03/FSRCNN_Layers_CustomIPs), [Ethernet_TCP_Verification](https://github.com/suhwanJo03/Ethernet_TCP_Verification)
-
-**이준식 (Junsik Lee)** — this repository
-- Role: **Feature Extraction Layer RTL Design & Model Compression**
-- Repo in Detail: [`hdl/individual_layers/feature_extraction/`](hdl/individual_layers/feature_extraction/)
+- Repo in Detail: [FSRCNN_Layers_CustomIPs](https://github.com/suhwanJo03/FSRCNN_Layers_CustomIPs)
 
 **이정호 (Jungho Lee)**
 - Role: **Deconvolution Layer RTL Design & software reference, quantization**
